@@ -1,0 +1,25 @@
+# How to Deploy This Azure Static Website
+
+## 1. Create a Storage Account in Azure
+- Go to the [Azure Portal](https://portal.azure.com).
+- Navigate to **Storage Accounts** and click **Create**.
+- Fill in subscription, resource group, unique storage account name, and region.
+- Click **Review + create** and then **Create**.
+
+## 2. Enable Static Website Hosting
+- Open your new storage account.
+- In the left menu, click **Static website** under **Data management**.
+- Set **Static website** to **Enabled**.
+- Enter `index.html` as the Index document name.
+- Enter `error.html` as the Error document path.
+- Click **Save** (this creates a special `$web` container).
+
+## 3. Upload Website Files
+- Go to **Containers**, then open the `$web` container.
+- Upload your website files (`index.html`, `error.html`, `style.css`, images, etc.) from this repository.
+
+## 4. Access Your Deployed Website
+- Go back to the **Static website** settings.
+- Copy the **Primary endpoint** URL.
+- Open the URL in your browser to see your deployed static site.
+- Visit a non-existent page to test your custom error page.
